@@ -1,6 +1,8 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -13,25 +15,45 @@ public class Employee {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "first_name", nullable = false)
+    @NotBlank(message = "Meno je povinné")
+    @Size(min = 2, max = 50, message = "Meno musí mať 2-50 znakov")
+    @Column(name = "first_name")
     private String firstName;
 
-    @Column(name = "last_name", nullable = false)
+    @NotBlank(message = "Priezvisko je povinné")
+    @Size(min = 2, max = 50, message = "Priezvisko musí mať 2-50 znakov")
+    @Column(name = "last_name")
     private String lastName;
 
+    @NotNull(message = "Dátum narodenia je povinný.")
+    @Past(message = "Dátum narodenia musí byť v minulosti.")
     @Column(name = "birth_date", nullable = false)
     private LocalDate birthDate;
 
-    @Column(name = "email", nullable = false)
+    @NotBlank(message = "Email je povinný.")
+    @Pattern(
+            regexp = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$",
+            message = "Zadajte platný formát emailovej adresy."
+    )
     private String email;
 
+    @NotBlank(message = "Telefónne číslo je povinné.")
+    @Pattern(
+            regexp = "^\\+421\\d{9}$",
+            message = "Telefónne číslo musí byť vo formáte +4219XXXXXXXX (9 číslic)."
+    )
     @Column(name = "phone", nullable = false, length = 15)
     private String phone;
 
+    @NotBlank(message = "Názov pracovnej pozície je povinný.")
+    @Size(min = 2, max = 100, message = "Názov pracovnej pozície musí mať 2-100 znakov.")
     @Column(name = "job_title", nullable = false)
     private String jobTitle;
 
-    @Column(name = "salary")
+    @NotNull(message = "Plat je povinný.")
+    @DecimalMin(value = "0.0", inclusive = false, message = "Plat musí byť kladné číslo.")
+    @Digits(integer = 8, fraction = 2, message = "Plat môže mať maximálne 8 číslic a 2 desatinné miesta.")
+    @Column(name = "salary", nullable = false)
     private BigDecimal salary;
 
     @Column(name = "full_time", nullable = false)
