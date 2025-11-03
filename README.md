@@ -1,6 +1,10 @@
-<img width="1918" height="980" alt="Snímka obrazovky 2025-10-27 185743" src="https://github.com/user-attachments/assets/714a5a28-8b64-43d2-a936-105d4d8aab84" />
-<img width="1919" height="965" alt="Snímka obrazovky 2025-10-27 191448" src="https://github.com/user-attachments/assets/9c22cec7-1fa3-4153-909e-f9e6f5e37cd6" />
-<img width="1919" height="966" alt="Snímka obrazovky 2025-10-27 191332" src="https://github.com/user-attachments/assets/2d553edf-598e-4993-a84a-fa7222406300" />
-<img width="1912" height="964" alt="Snímka obrazovky 2025-10-27 191351" src="https://github.com/user-attachments/assets/8c742d6d-bc2d-4ac5-966b-4e85ce35ed40" />
-<img width="1919" height="969" alt="Snímka obrazovky 2025-10-27 191539" src="https://github.com/user-attachments/assets/a091649f-3b73-49f7-86b0-9e5a5bd6d479" />
-<img width="1919" height="969" alt="Snímka obrazovky 2025-10-27 191549" src="https://github.com/user-attachments/assets/61e47c28-ac90-46fb-925d-5c440e1b1ae1" />
+<img width="1919" height="868" alt="Snímka obrazovky 2025-11-03 191048" src="https://github.com/user-attachments/assets/b2378976-0bb8-42a7-aa8c-b598970babc1" />
+
+<img width="1919" height="868" alt="Snímka obrazovky 2025-11-03 191129" src="https://github.com/user-attachments/assets/e9f4f533-e69a-4720-9285-c4287afd0b96" />
+<img width="1917" height="867" alt="Snímka obrazovky 2025-11-03 191234" src="https://github.com/user-attachments/assets/00208e90-e971-4def-ae6c-e79b86db80be" />
+<img width="1919" height="865" alt="Snímka obrazovky 2025-11-03 195359" src="https://github.com/user-attachments/assets/6a082edc-7ae8-4eb9-b8fa-001a7d8ffbac" />
+<img width="1919" height="869" alt="Snímka obrazovky 2025-11-03 195615" src="https://github.com/user-attachments/assets/b6a4bdc0-5493-4d58-866d-6b19b39c3b16" />
+<img width="1919" height="865" alt="Snímka obrazovky 2025-11-03 195653" src="https://github.com/user-attachments/assets/3fb3abd6-9137-4fbc-8ec7-361ca47cf093" />
+<img width="1919" height="866" alt="Snímka obrazovky 2025-11-03 195719" src="https://github.com/user-attachments/assets/58a5de82-5333-4e43-a40f-51af1ed73b17" />
+<img width="1919" height="865" alt="Snímka obrazovky 2025-11-03 200027" src="https://github.com/user-attachments/assets/8a57d9e6-bded-49a8-942c-852ad48bc1d6" />
+<img width="1919" height="863" alt="Snímka obrazovky 2025-11-03 200100" src="https://github.com/user-attachments/assets/1cef507a-ecad-4ea9-b91b-124b28287637" />
