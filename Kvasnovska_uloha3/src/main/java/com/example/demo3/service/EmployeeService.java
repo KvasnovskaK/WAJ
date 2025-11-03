@@ -5,6 +5,7 @@ import java.util.List;
 
 public interface EmployeeService {
     List<Employee> findAll();
+    List<Employee> getSortedEmployees();
     Employee findById(Long id);
     Employee save(Employee employee);
     void deleteById(Long id);

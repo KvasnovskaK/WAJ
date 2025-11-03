@@ -1,10 +1,15 @@
 package com.example.demo3.controller;
 
 import com.example.demo3.entity.Employee;
+import com.example.demo3.exception.EmailAlreadyExistsException;
 import com.example.demo3.service.EmployeeService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,6 +25,11 @@ public class EmployeeController {
 
     public EmployeeController(EmployeeService employeeService) {
         this.employeeService = employeeService;
+    }
+
+    @InitBinder
+    public void initBinder(WebDataBinder binder) {
+        binder.registerCustomEditor(String.class, new StringTrimmerEditor(true));
     }
 
     @GetMapping
@@ -42,10 +52,35 @@ public class EmployeeController {
     }
 
     @PostMapping
-    public String createEmployee(@ModelAttribute("employee") Employee employee) {
-        employeeService.save(employee);
-        return "redirect:/employees";
+    public String saveEmployee(
+            @Valid @ModelAttribute("employee") Employee employee,
+            BindingResult bindingResult,
+            Model model
+    ) {
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("jobTitles", jobTitles);
+            return "employees/form";
+        }
+
+        try {
+            employeeService.save(employee);
+            return "redirect:/employees";
+        } catch (EmailAlreadyExistsException ex) {
+            bindingResult.rejectValue("email", "email.exists", ex.getMessage());
+            model.addAttribute("jobTitles", jobTitles);
+            return "employees/form";
+        }
     }
+
+    @GetMapping("/{id}/edit")
+    public String showUpdateForm(@PathVariable Long id, Model model) {
+        Employee employee = employeeService.findById(id);
+        model.addAttribute("employee", employee);
+        model.addAttribute("jobTitles", jobTitles);
+        return "employees/form";
+    }
+
+
 
     @PostMapping("/{id}/delete")
     public String deleteEmployee(@PathVariable Long id) {

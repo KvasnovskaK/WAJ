@@ -24,7 +24,7 @@
                 <div class="col-md-6"><strong>Telefón:</strong> <span th:text="${employee.phone}"></span></div>
                 <div class="col-md-6"><strong>Pozícia:</strong> <span th:text="${employee.jobTitle}"></span></div>
                 <div class="col-md-6"><strong>Plat:</strong> <span th:text="${employee.salary}"></span> €</div>
-                <div class="col-md-6"><strong>Úväzok:</strong> <span th:text="${employee.fullTime} ? 'Plný' : 'Čiastočný'"></span></div>
+                <div class="col-md-6"><strong>Úväzok:</strong> <span th:text="${employee.fullTime}"></span></div>
             </div>
             <hr>
             <a class="btn btn-outline-primary mt-3" th:href="@{/employees}">← Späť na zoznam</a>
